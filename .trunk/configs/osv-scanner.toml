@@ -1,0 +1,11 @@
+# OSV-Scanner config — https://google.github.io/osv-scanner/configuration/
+#
+# Each [[IgnoredVulns]] block suppresses a single advisory. Re-evaluate every
+# entry on or before its `ignoreUntil` date — remove the block once the
+# affected dependency has been bumped or pinned past the vulnerable range.
+
+# fast-xml-parser — XMLBuilder: XML Comment and CDATA Injection via Unescaped Delimiters. Current version is vulnerable: 4.5.6.
+[[IgnoredVulns]]
+id = "GHSA-gh4j-gqv2-49f6"
+ignoreUntil = 2026-11-10
+reason = ""
