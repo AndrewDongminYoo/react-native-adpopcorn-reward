@@ -1,46 +1,72 @@
 buildscript {
-    repositories {
-        google()
-        mavenCentral()
+  ext.AdpopcornReward = [
+    kotlinVersion: "2.0.21",
+    minSdkVersion: 24,
+    compileSdkVersion: 36,
+    targetSdkVersion: 36
+  ]
+
+  ext.getExtOrDefault = { prop ->
+    if (rootProject.ext.has(prop)) {
+      return rootProject.ext.get(prop)
     }
-    dependencies {
-        classpath 'com.android.tools.build:gradle:7.3.1'
-    }
+
+    return AdpopcornReward[prop]
+  }
+
+  repositories {
+    google()
+    mavenCentral()
+  }
+
+  dependencies {
+    classpath "com.android.tools.build:gradle:8.7.2"
+    // noinspection DifferentKotlinGradleVersion
+    classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${getExtOrDefault('kotlinVersion')}"
+  }
 }
 
-apply plugin: 'com.android.library'
 
-def safeExtGet(prop, fallback) {
-    rootProject.ext.has(prop) ? rootProject.ext.get(prop) : fallback
-}
+apply plugin: "com.android.library"
+apply plugin: "kotlin-android"
+
+apply plugin: "com.facebook.react"
 
 android {
-    namespace "com.adpopcorn.adpopcornreward.reactnative"
-    compileSdkVersion safeExtGet('compileSdkVersion', 33)
+  namespace "com.adpopcorn.adpopcornreward.reactnative"
 
-    defaultConfig {
-        minSdkVersion safeExtGet('minSdkVersion', 21)
-        targetSdkVersion safeExtGet('targetSdkVersion', 33)
-    }
+  compileSdkVersion getExtOrDefault("compileSdkVersion")
 
-    sourceSets {
-        main {
-            java.srcDirs = ['src/main/java']
-        }
-    }
+  defaultConfig {
+    minSdkVersion getExtOrDefault("minSdkVersion")
+    targetSdkVersion getExtOrDefault("targetSdkVersion")
+  }
 
-    lintOptions {
-        abortOnError false
+  buildFeatures {
+    buildConfig true
+  }
+
+  buildTypes {
+    release {
+      minifyEnabled false
     }
+  }
+
+  lint {
+    disable "GradleCompatible"
+  }
+
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_1_8
+    targetCompatibility JavaVersion.VERSION_1_8
+  }
 }
 
 repositories {
-    google()
-    mavenCentral()
-    maven { url 'https://repository.igaworks.com/maven' }
+  maven { url "https://repository.igaworks.com/maven" }
 }
 
 dependencies {
-    compileOnly 'com.facebook.react:react-android:+'
-    implementation 'com.igaworks.offerwall:AdPopcornOfferwall:9.2.6'
+  implementation "com.facebook.react:react-android"
+  implementation "com.igaworks.offerwall:AdPopcornOfferwall:9.2.6"
 }

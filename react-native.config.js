@@ -2,8 +2,9 @@ module.exports = {
   dependency: {
     platforms: {
       android: {
-        sourceDir: './android',
-        packageImportPath: 'import com.adpopcorn.adpopcornreward.reactnative.RNAdPopcornRewardPackage;',
+        packageImportPath:
+          "import com.adpopcorn.adpopcornreward.reactnative.AdpopcornRewardPackage;",
+        packageInstance: "new AdpopcornRewardPackage()",
       },
       ios: {},
     },

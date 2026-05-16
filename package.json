@@ -1,20 +1,43 @@
 {
   "name": "react-native-adpopcorn-reward",
   "version": "1.0.0",
-  "description": "AdPopcorn Reward (Offerwall) SDK React Native Plugin",
-  "main": "src/index.ts",
-  "types": "src/index.ts",
-  "react-native": "src/index.ts",
+  "description": "AdPopcorn Reward (Offerwall) SDK React Native Plugin - TurboModule Version",
+  "main": "./lib/module/index.js",
+  "types": "./lib/typescript/src/index.d.ts",
+  "exports": {
+    ".": {
+      "source": "./src/index.ts",
+      "types": "./lib/typescript/src/index.d.ts",
+      "default": "./lib/module/index.js"
+    },
+    "./package.json": "./package.json"
+  },
   "files": [
-    "src/",
-    "android/",
-    "ios/",
+    "src",
+    "lib",
+    "android",
+    "ios",
+    "cpp",
     "react-native.config.js",
-    "react-native-adpopcorn-reward.podspec",
-    "README.md"
+    "*.podspec",
+    "!ios/build",
+    "!android/build",
+    "!android/gradle",
+    "!android/gradlew",
+    "!android/gradlew.bat",
+    "!android/local.properties",
+    "!**/__tests__",
+    "!**/__fixtures__",
+    "!**/__mocks__",
+    "!**/.*"
   ],
   "scripts": {
-    "lint": "eslint src/"
+    "example": "yarn workspace react-native-adpopcorn-reward-example",
+    "clean": "del-cli android/build example/android/build example/android/app/build example/ios/build lib",
+    "prepare": "bob build",
+    "typecheck": "tsc",
+    "lint": "eslint \"**/*.{js,ts,tsx}\"",
+    "test": "jest"
   },
   "keywords": [
     "react-native",
@@ -22,22 +45,70 @@
     "reward",
     "offerwall",
     "native-ad",
-    "advertising"
+    "advertising",
+    "ios",
+    "android"
   ],
-  "author": "AdPopcorn",
+  "author": "Dongmin, Yu <ydm2790@gmail.com> (https://github.com/AndrewDongminYoo)",
   "license": "MIT",
-  "homepage": "https://www.adpopcorn.com",
+  "homepage": "https://github.com/AndrewDongminYoo/react-native-adpopcorn-reward#readme",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "git+https://github.com/AndrewDongminYoo/react-native-adpopcorn-reward.git"
   },
-  "peerDependencies": {
-    "react": ">=16.8.0",
-    "react-native": ">=0.60.0"
+  "bugs": {
+    "url": "https://github.com/AndrewDongminYoo/react-native-adpopcorn-reward/issues"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
   },
   "devDependencies": {
-    "react": "18.2.0",
-    "react-native": "0.71.8",
-    "typescript": "4.8.4"
+    "@eslint/compat": "^2.0.3",
+    "@eslint/eslintrc": "^3.3.5",
+    "@eslint/js": "^9.39.4",
+    "@jest/globals": "^30.0.0",
+    "@react-native/babel-preset": "0.85.2",
+    "@react-native/eslint-config": "0.85.2",
+    "@react-native/jest-preset": "0.85.2",
+    "@types/react": "^19.2.0",
+    "del-cli": "^7.0.0",
+    "eslint": "^9.39.4",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.5",
+    "jest": "^30.3.0",
+    "prettier": "^3.8.3",
+    "react": "19.2.5",
+    "react-native": "0.85.2",
+    "react-native-builder-bob": "^0.41.0",
+    "turbo": "^2.9.8",
+    "typescript": "^6.0.3"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
+  },
+  "workspaces": [
+    "example"
+  ],
+  "resolutions": {
+    "jest-environment-node": "^30.4.1"
+  },
+  "packageManager": "yarn@4.11.0",
+  "codegenConfig": {
+    "name": "AdpopcornRewardSpec",
+    "type": "all",
+    "jsSrcsDir": "src",
+    "android": {
+      "javaPackageName": "com.adpopcorn.adpopcornreward.reactnative"
+    }
+  },
+  "create-react-native-library": {
+    "type": "turbo-module",
+    "languages": "kotlin-objc",
+    "tools": [
+      "eslint",
+      "jest"
+    ],
+    "version": "0.62.0"
   }
 }
