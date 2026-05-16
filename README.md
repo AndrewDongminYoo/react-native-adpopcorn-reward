@@ -7,9 +7,12 @@ AdPopcorn Reward (Offerwall) SDK React Native plugin. Implemented as a TurboModu
 ## Requirements
 
 - React Native **0.76 or newer** (this repo targets 0.85).
-- Host app must run with **`newArchEnabled=true`** — the module uses `TurboModuleRegistry.getEnforcing` and will crash at startup otherwise.
+- Host app must run with **the New Architecture enabled**. The module uses `TurboModuleRegistry.getEnforcing` and will crash at startup otherwise.
+  - iOS: set `:fabric_enabled => true` or `ENV['RCT_NEW_ARCH_ENABLED'] = '1'` in `ios/Podfile` (RN 0.76+ defaults to enabled).
+  - Android: `newArchEnabled=true` in `android/gradle.properties` (also enabled by default on the RN 0.76+ template).
 - iOS deployment target ≥ 12.0, Xcode 15+.
 - Android `minSdk` 24, `compileSdk` 36.
+- You'll need an `appKey` / `hashKey` from the [AdPopcorn dashboard](https://www.adpopcorn.com/).
 
 ## Installation
 
@@ -158,6 +161,27 @@ Only two event names are supported:
 AdPopcornRewardEvents.OnClosedOfferWallPage; // "OnClosedOfferWallPage"
 AdPopcornRewardEvents.OnCompletedCampaign; // "OnCompletedCampaign"
 ```
+
+## Trying the example app
+
+A working example app lives in `example/`. After cloning:
+
+```sh
+yarn
+# fill in APP_KEY / HASH_KEY / NATIVE_AD_PLACEMENT_ID at the top of example/src/App.tsx
+yarn example start   # Metro, in one terminal
+yarn example ios     # in another, or
+yarn example android
+```
+
+On Android, add the same appKey/hashKey to `example/android/app/src/main/AndroidManifest.xml` as `<meta-data>` entries (see [Installation › Android](#android) above) — `setAppKey()` is intentionally a no-op there.
+
+## Troubleshooting
+
+- **`TurboModuleRegistry.getEnforcing(...): 'AdpopcornReward' could not be found`** — the New Architecture is off. Re-check the [Requirements](#requirements) section.
+- **Offerwall opens but returns immediately on Android** — `<meta-data>` for `APAppKey` / `APHashKey` is missing from your `AndroidManifest.xml`. The library logs `W AdpopcornRewardModule: setAppKey() is a no-op on Android. Configure appKey/hashKey via AndroidManifest meta-data ...` when you call `setAppKey()` — that warning is your reminder.
+- **`E_INFLIGHT` from `getOfferwallTotalRewardInfo()` / `getBridgeTotalRewardInfo()`** — a previous query for the same scope is still pending. The library is single-flight per scope; queue your own calls, or await each one before issuing the next.
+- **`[runtime not ready]: ... 'PlatformConstants' could not be found`** in logcat / iOS console — only seen when the app starts without Metro reachable (e.g. a debug build with no `yarn example start` running). Not caused by this library. Start Metro and reload.
 
 ## Validating an integration
 
