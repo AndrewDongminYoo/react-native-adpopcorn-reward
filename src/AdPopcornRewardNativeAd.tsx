@@ -42,8 +42,7 @@ export const AdPopcornRewardNativeAd = forwardRef<
     style,
   } = props;
 
-  const nativeRef =
-    useRef<React.ComponentRef<AdpopcornRewardNativeAdType>>(null);
+  const nativeRef = useRef<React.ComponentRef<AdpopcornRewardNativeAdType>>(null);
 
   useImperativeHandle(ref, () => ({
     loadAd: () => {

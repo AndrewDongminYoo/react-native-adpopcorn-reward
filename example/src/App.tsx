@@ -1,13 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import {
-  Alert,
-  Button,
-  Platform,
-  ScrollView,
-  StyleSheet,
-  Text,
-  View,
-} from "react-native";
+import { Alert, Button, Platform, ScrollView, StyleSheet, Text, View } from "react-native";
 
 import AdPopcornReward, {
   AdPopcornRewardEvents,
@@ -32,13 +24,12 @@ export default function App() {
     }
     AdPopcornReward.setUserId(USER_ID);
 
-    const closeSub = AdPopcornReward.addListener(
-      AdPopcornRewardEvents.OnClosedOfferWallPage,
-      () => setStatus("offerwall closed"),
+    const closeSub = AdPopcornReward.addListener(AdPopcornRewardEvents.OnClosedOfferWallPage, () =>
+      setStatus("offerwall closed")
     );
     const completedSub = AdPopcornReward.addListener(
       AdPopcornRewardEvents.OnCompletedCampaign,
-      () => setStatus("campaign completed"),
+      () => setStatus("campaign completed")
     );
 
     return () => {
@@ -83,9 +74,7 @@ export default function App() {
         nativeWidth={320}
         nativeHeight={250}
         onLoadSuccess={() => setStatus("native ad loaded")}
-        onLoadFailed={(event) =>
-          setStatus(`native ad failed (${event.nativeEvent.errorCode})`)
-        }
+        onLoadFailed={(event) => setStatus(`native ad failed (${event.nativeEvent.errorCode})`)}
         onClicked={() => setStatus("native ad clicked")}
         onCompleted={() => setStatus("native ad completed")}
       />

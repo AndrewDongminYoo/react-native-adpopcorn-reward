@@ -33,5 +33,5 @@ export const Commands: NativeCommands = codegenNativeCommands<NativeCommands>({
 });
 
 export default codegenNativeComponent<NativeProps>(
-  "AdpopcornRewardNativeAd",
+  "AdpopcornRewardNativeAd"
 ) as AdpopcornRewardNativeAdType;

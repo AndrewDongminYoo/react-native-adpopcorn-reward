@@ -1,8 +1,4 @@
-import {
-  TurboModuleRegistry,
-  type CodegenTypes,
-  type TurboModule,
-} from "react-native";
+import { TurboModuleRegistry, type CodegenTypes, type TurboModule } from "react-native";
 
 export interface OfferwallTotalRewardInfo {
   queryResult: boolean;
@@ -36,9 +32,7 @@ export interface Spec extends TurboModule {
   openCSPage(): void;
 
   getOfferwallTotalRewardInfo(): Promise<OfferwallTotalRewardInfo>;
-  getBridgeTotalRewardInfo(
-    bridgePlacementId: string,
-  ): Promise<BridgeTotalRewardInfo>;
+  getBridgeTotalRewardInfo(bridgePlacementId: string): Promise<BridgeTotalRewardInfo>;
 
   readonly onClosedOfferWallPage: CodegenTypes.EventEmitter<void>;
   readonly onCompletedCampaign: CodegenTypes.EventEmitter<void>;

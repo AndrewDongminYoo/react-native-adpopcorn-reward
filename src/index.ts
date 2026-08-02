@@ -8,10 +8,7 @@ export {
   type LoadFailedEvent,
 } from "./AdPopcornRewardNativeAd";
 
-export type {
-  BridgeTotalRewardInfo,
-  OfferwallTotalRewardInfo,
-} from "./NativeAdpopcornReward";
+export type { BridgeTotalRewardInfo, OfferwallTotalRewardInfo } from "./NativeAdpopcornReward";
 
 // Public event name constants. Note: legacy also exposed
 // OnOfferwallTotalRewardInfo / OnBridgeTotalRewardInfo, but those are removed
@@ -87,10 +84,7 @@ const AdPopcornReward = {
    * `OnBridgeTotalRewardInfo` here — those are no longer events, use the
    * Promise-returning queries above instead.
    */
-  addListener(
-    eventName: AdPopcornRewardEventName,
-    callback: () => void,
-  ): EventSubscription {
+  addListener(eventName: AdPopcornRewardEventName, callback: () => void): EventSubscription {
     switch (eventName) {
       case AdPopcornRewardEvents.OnClosedOfferWallPage:
         return NativeAdpopcornReward.onClosedOfferWallPage(callback);
