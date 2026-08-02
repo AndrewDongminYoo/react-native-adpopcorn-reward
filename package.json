@@ -91,7 +91,11 @@
     "example"
   ],
   "resolutions": {
-    "jest-environment-node": "^30.4.1"
+    "jest-environment-node": "^30.4.1",
+    "joi": "^17.13.4",
+    "launch-editor": "^2.14.1",
+    "qs": "^6.15.2",
+    "undici": "^6.27.0"
   },
   "packageManager": "yarn@4.11.0",
   "codegenConfig": {
