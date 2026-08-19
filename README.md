@@ -1,5 +1,14 @@
 # react-native-adpopcorn-reward
 
+![Abstract mobile offerwall and reward flow](.github/assets/readme-hero.png)
+
+[![CI](https://github.com/AndrewDongminYoo/react-native-adpopcorn-reward/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/AndrewDongminYoo/react-native-adpopcorn-reward/actions/workflows/ci.yml)
+[![npm version](https://img.shields.io/npm/v/react-native-adpopcorn-reward)](https://www.npmjs.com/package/react-native-adpopcorn-reward)
+[![npm downloads](https://img.shields.io/npm/dm/react-native-adpopcorn-reward)](https://www.npmjs.com/package/react-native-adpopcorn-reward)
+[![MIT license](https://img.shields.io/npm/l/react-native-adpopcorn-reward)](LICENSE)
+[![React Native New Architecture](https://img.shields.io/badge/React%20Native-New%20Architecture-61DAFB?logo=react&logoColor=white)](https://reactnative.dev/docs/the-new-architecture/landing-page)
+[![iOS and Android](https://img.shields.io/badge/platforms-iOS%20%7C%20Android-6B7280)](#requirements)
+
 AdPopcorn Reward (Offerwall) SDK React Native plugin. Implemented as a TurboModule + Fabric component on the New Architecture.
 
 > 2.0 is a hard breaking change from 1.x — see [`CHANGELOG.md`](./CHANGELOG.md) before upgrading.
