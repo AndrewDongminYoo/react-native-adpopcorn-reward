@@ -94,7 +94,7 @@
   "resolutions": {
     "jest-environment-node": "^30.4.1",
     "joi": "^17.13.4",
-    "launch-editor": "^2.14.1",
+    "launch-editor": "^2.14.2",
     "qs": "^6.16.0",
     "undici": "^6.27.0"
   },
