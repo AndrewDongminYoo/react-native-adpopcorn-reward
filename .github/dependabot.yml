@@ -47,7 +47,7 @@ updates:
           - version-update:semver-patch
           - version-update:semver-minor
           - version-update:semver-major
-      # Builder Bob 0.44 needs Vite 8, and the examples stay on Vite 7 (#19). Patch updates stay open.
+      # Builder Bob 0.44 needs Vite 8, and the account keeps the library examples on Vite 7 (#19). Patch updates stay open.
       - dependency-name: react-native-builder-bob
         update-types:
           - version-update:semver-minor
