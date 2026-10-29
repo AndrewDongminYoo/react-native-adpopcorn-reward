@@ -40,6 +40,22 @@ updates:
           - version-update:semver-patch
           - version-update:semver-minor
           - version-update:semver-major
+      # react must equal the React version that the react-native renderer bundles (19.2.3), so it moves with React Native (#19).
+      # update-types limits this to version updates; security updates still open.
+      - dependency-name: react
+        update-types:
+          - version-update:semver-patch
+          - version-update:semver-minor
+          - version-update:semver-major
+      # Builder Bob 0.44 needs Vite 8, and the examples stay on Vite 7 (#19). Patch updates stay open.
+      - dependency-name: react-native-builder-bob
+        update-types:
+          - version-update:semver-minor
+          - version-update:semver-major
+      # Babel 8 is a major migration, and @react-native/babel-preset supports Babel 7 only (#20).
+      - dependency-name: "@babel/*"
+        update-types:
+          - version-update:semver-major
     groups:
       npm-minor-patch:
         patterns:
