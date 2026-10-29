@@ -68,5 +68,5 @@ repositories {
 
 dependencies {
   implementation "com.facebook.react:react-android"
-  implementation "com.igaworks.offerwall:AdPopcornOfferwall:9.2.6"
+  implementation "com.igaworks.offerwall:AdPopcornOfferwall:9.2.7"
 }
