@@ -71,6 +71,14 @@ export default defineConfig([
     },
   },
   {
+    // Preserve this forwardRef render function's existing debug name.
+    // Other shadowed names and other files retain the inherited rule.
+    files: ["src/AdPopcornRewardNativeAd.tsx"],
+    rules: {
+      "@typescript-eslint/no-shadow": ["warn", { allow: ["AdPopcornRewardNativeAd"] }],
+    },
+  },
+  {
     // Keep LAST so it wins the settings merge over @react-native's config.
     settings: {
       react: {
