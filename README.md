@@ -19,7 +19,7 @@ AdPopcorn Reward (Offerwall) SDK React Native plugin. Implemented as a TurboModu
 - Host app must run with **the New Architecture enabled**. The module uses `TurboModuleRegistry.getEnforcing` and will crash at startup otherwise.
   - iOS: set `:fabric_enabled => true` or `ENV['RCT_NEW_ARCH_ENABLED'] = '1'` in `ios/Podfile` (RN 0.76+ defaults to enabled).
   - Android: `newArchEnabled=true` in `android/gradle.properties` (also enabled by default on the RN 0.76+ template).
-- iOS deployment target ≥ 12.0, Xcode 15+.
+- iOS deployment target follows the installed React Native minimum (`15.1` with the pinned RN 0.85.3); use a matching Xcode toolchain.
 - Android `minSdk` 24, `compileSdk` 36.
 - You'll need an `appKey` / `hashKey` from the [AdPopcorn dashboard](https://www.adpopcorn.com/).
 
@@ -205,3 +205,12 @@ See [`docs/validation-checklist.md`](./docs/validation-checklist.md) for a per-p
 ## License
 
 MIT
+
+## Quality maintenance
+
+Use Node `v24.22.2` and the integrity-pinned vendored Yarn `4.18.1`.
+Root and example React `19.2.3` match RN `0.85.3`’s Fabric renderer.
+Run `yarn install --immutable`, `yarn lint`, `yarn typecheck` and `yarn prepare` for dependency, source and library-build checks.
+The Jest suite currently has one todo and no executable test.
+Run `trunk check --all --no-fix --jobs=2 --monitor=false`, then `trunk daemon shutdown --monitor=false` from the same checkout.
+These checks do not exercise native builds, devices or the live ad service.

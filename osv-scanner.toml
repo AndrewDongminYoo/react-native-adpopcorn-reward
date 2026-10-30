@@ -1,0 +1,6 @@
+# Verified 2026-10-29 against the resolved lock and official advisory.
+# Both Jest configuration and React Native CLI tooling install deepmerge 4.3.1.
+# No fixed release exists; do not claim these paths are unreachable.
+[[IgnoredVulns]]
+id = "GHSA-gcqx-w48m-w2h4"
+reason = "deepmerge 4.3.1 has no published fixed release in the checked advisory. Retained through Jest configuration and React Native CLI configuration/doctor tooling; reassess when a compatible fix becomes available."

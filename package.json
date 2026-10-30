@@ -70,8 +70,8 @@
     "@react-native/babel-preset": "0.85.3",
     "@react-native/eslint-config": "0.85.3",
     "@react-native/jest-preset": "0.85.3",
-    "@types/react": "^19.2.0",
-    "del-cli": "^7.0.0",
+    "@types/react": "~19.2.18",
+    "del-cli": "^8.0.1",
     "eslint": "^10.13.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.7",
@@ -82,7 +82,7 @@
     "react-native": "0.85.3",
     "react-native-builder-bob": "^0.41.0",
     "turbo": "^2.11.10",
-    "typescript": "^6.0.3"
+    "typescript": "~6.0.3"
   },
   "peerDependencies": {
     "react": "*",
@@ -92,14 +92,14 @@
     "example"
   ],
   "resolutions": {
-    "jest-environment-node": "^30.4.1",
-    "joi": "^17.13.4",
+    "jest-environment-node": "^30.5.2",
+    "joi": "^17.13.9",
     "launch-editor": "^2.14.2",
     "qs": "^6.17.1",
-    "shell-quote": "^1.11.0",
-    "undici": "^6.27.0"
+    "shell-quote": "^1.12.0",
+    "undici": "^6.29.1"
   },
-  "packageManager": "yarn@4.11.0",
+  "packageManager": "yarn@4.18.1+sha512.b2e1e7524f654f2749d32b4ebcb4622473cb5bcbc485df2007e12a154e50162a4d795526768bc5f5b8f81717bfd79deb2472813d86fb5ae2eb551fa9c872b08f",
   "codegenConfig": {
     "name": "AdpopcornRewardSpec",
     "type": "all",
