@@ -97,7 +97,16 @@
     "launch-editor": "^2.14.2",
     "qs": "^6.17.1",
     "shell-quote": "^1.12.0",
-    "undici": "^6.29.1"
+    "undici": "^6.29.1",
+    "@eslint/config-array@npm:0.23.5/minimatch": "^11.0.1",
+    "@jest/reporters@npm:30.5.2/glob": "^14.0.2",
+    "@typescript-eslint/typescript-estree@npm:8.72.1/minimatch": "^11.0.1",
+    "eslint@npm:10.13.0/minimatch": "^11.0.1",
+    "jest-config@npm:30.5.2/glob": "^14.0.2",
+    "jest-runtime@npm:30.5.2/glob": "^14.0.2",
+    "react-native-builder-bob@npm:0.41.0/glob": "^14.0.2",
+    "test-exclude@npm:7.0.2/glob": "^14.0.2",
+    "test-exclude@npm:7.0.2/minimatch": "^11.0.1"
   },
   "packageManager": "yarn@4.18.1+sha512.b2e1e7524f654f2749d32b4ebcb4622473cb5bcbc485df2007e12a154e50162a4d795526768bc5f5b8f81717bfd79deb2472813d86fb5ae2eb551fa9c872b08f",
   "codegenConfig": {

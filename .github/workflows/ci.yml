@@ -46,6 +46,9 @@ jobs:
       - name: Typecheck files
         run: yarn typecheck
 
+      - name: Build JavaScript and type declarations
+        run: yarn prepare
+
   test:
     name: Test
     needs: guard
