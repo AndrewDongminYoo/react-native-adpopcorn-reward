@@ -56,6 +56,10 @@ updates:
       - dependency-name: "@babel/*"
         update-types:
           - version-update:semver-major
+      # A CLI major moves with the React Native upgrade, as one set of the cli and both platform packages (#34).
+      - dependency-name: "@react-native-community/cli*"
+        update-types:
+          - version-update:semver-major
     groups:
       npm-minor-patch:
         patterns:
