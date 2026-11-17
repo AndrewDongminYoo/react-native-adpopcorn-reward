@@ -28,6 +28,8 @@ Native SDK versions pinned today:
 ## Common commands
 
 All commands are run from the repo root unless noted. CI (`.github/workflows/ci.yml`) runs `yarn lint`, `yarn typecheck`, `yarn test --maxWorkers=2 --coverage`, and `yarn npm audit --environment production`.
+The separate Ruby job installs `example/Gemfile.lock` with frozen Bundler settings and runs `bundle exec ruby ../scripts/test_ruby_dependencies.rb` from `example/`.
+It checks loaded gem versions, CocoaPods parsing, Addressable URL normalization, and an Xcodeproj write/read round-trip.
 
 ```sh
 yarn                          # install workspace deps
