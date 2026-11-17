@@ -85,7 +85,7 @@ jobs:
   ruby:
     name: Ruby dependency checks
     needs: guard
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 10
     env:
       BUNDLE_FROZEN: "true"
