@@ -81,3 +81,28 @@ jobs:
 
       - name: Audit production dependencies
         run: yarn npm audit --environment production
+
+  ruby:
+    name: Ruby dependency checks
+    needs: guard
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      BUNDLE_FROZEN: "true"
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Install locked Ruby dependencies
+        uses: ruby/setup-ruby@b3aaceaef7e0ee231b499e7b5f49c03fc1d32199 # v1.338.0
+        with:
+          ruby-version: 3.4.1
+          bundler: Gemfile.lock
+          bundler-cache: true
+          working-directory: example
+
+      - name: Exercise CocoaPods and its locked dependencies
+        working-directory: example
+        run: bundle exec ruby ../scripts/test_ruby_dependencies.rb
