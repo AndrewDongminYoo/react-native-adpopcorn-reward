@@ -5,19 +5,19 @@ __metadata:
   version: 10
   cacheKey: 10c0
 
-"@ark/schema@npm:0.56.8":
-  version: 0.56.8
-  resolution: "@ark/schema@npm:0.56.8"
+"@ark/schema@npm:0.56.9":
+  version: 0.56.9
+  resolution: "@ark/schema@npm:0.56.9"
   dependencies:
-    "@ark/util": "npm:0.56.8"
-  checksum: 10c0/fce4c9834aa3851478b12467784c09c927a754ed68695787e0d4cd33ddcaf54ab785fd5fbd4167137bd277a06f650df16b3220ddf5a18cb70042f2d66bcc2e9e
+    "@ark/util": "npm:0.56.9"
+  checksum: 10c0/2ca60f319ee68615bff551a0b387746393624080e0c4fcea4d5c39127b9b389d7cc1067bce99fd9bfd91f4c74ab9fe9d210602144a93e34276eb9b244028347b
   languageName: node
   linkType: hard
 
-"@ark/util@npm:0.56.8":
-  version: 0.56.8
-  resolution: "@ark/util@npm:0.56.8"
-  checksum: 10c0/732bcf35a3263c1c64ef487536c080f96a1c6f89d1991d6a855998b7507ef3f125dcf6e3ffb5d76a0db27f8cb8b6e54295616f80f11264f48316f1b408a64337
+"@ark/util@npm:0.56.9":
+  version: 0.56.9
+  resolution: "@ark/util@npm:0.56.9"
+  checksum: 10c0/9d41d41a8b13d372db704562fbca80c0a19f499ee8485019faa73dfb3131515856b257b9a4325faae58bef3667f44c0a3866cce13b997abd24d9a4ed8bc51edb
   languageName: node
   linkType: hard
 
@@ -3910,23 +3910,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"arkregex@npm:0.0.14":
-  version: 0.0.14
-  resolution: "arkregex@npm:0.0.14"
+"arkregex@npm:0.0.15":
+  version: 0.0.15
+  resolution: "arkregex@npm:0.0.15"
   dependencies:
-    "@ark/util": "npm:0.56.8"
-  checksum: 10c0/bd2317d44c6e6780d05a85ba89d4877632f12daaa64eab89943f514d22ca3931d1924703812b52bd25e17902ecf99bc8d4f509d7d6721ea197192572b9c646b9
+    "@ark/util": "npm:0.56.9"
+  checksum: 10c0/08b8ea16febd1bd5b00b883ff76c6f7f178266ce773cf63e4e629f494c8b40fc7a3510c1ece02086c2b2647577bde4c3304456e1800f94f8022c7967d85a1ad7
   languageName: node
   linkType: hard
 
 "arktype@npm:^2.2.0":
-  version: 2.2.9
-  resolution: "arktype@npm:2.2.9"
+  version: 2.2.10
+  resolution: "arktype@npm:2.2.10"
   dependencies:
-    "@ark/schema": "npm:0.56.8"
-    "@ark/util": "npm:0.56.8"
-    arkregex: "npm:0.0.14"
-  checksum: 10c0/f5db7112541b590568f08084f810b442fa213b55e6d6266a52c42a03dbfbf2e7263f800661e7622a8785c237de7aa738af3d752804e5898bac0a828ea9bcd53c
+    "@ark/schema": "npm:0.56.9"
+    "@ark/util": "npm:0.56.9"
+    arkregex: "npm:0.0.15"
+  checksum: 10c0/a57db28a318df7d1f1a8a89dd38ed4e07502b082f43e0a3c96e655896837b81131d84c919ea34aadbd17040398097bda2779044b90276787dd302066ff3872a0
   languageName: node
   linkType: hard
 
@@ -4293,11 +4293,11 @@ __metadata:
   linkType: hard
 
 "baseline-browser-mapping@npm:^2.11.37":
-  version: 2.11.38
-  resolution: "baseline-browser-mapping@npm:2.11.38"
+  version: 2.11.39
+  resolution: "baseline-browser-mapping@npm:2.11.39"
   bin:
     baseline-browser-mapping: dist/cli.cjs
-  checksum: 10c0/f9b9576f79e4c15a2e7cd2173380922ec82db65a5815fd7a01dc4081cc25ffb25002c07e25076831adec19bf5dcfe11acd0f73473a308e40bb070bc4a98762cb
+  checksum: 10c0/e5f58a4636d90e449aefc7d845310999c5427c337e828d55f629a8be8fcde253d37f294754a89263f08430d54cfb4f8f55792b58dc290394ddaa2869b551517f
   languageName: node
   linkType: hard
 
@@ -5021,9 +5021,9 @@ __metadata:
   linkType: hard
 
 "electron-to-chromium@npm:^1.5.486":
-  version: 1.5.488
-  resolution: "electron-to-chromium@npm:1.5.488"
-  checksum: 10c0/0bf154d9760aee1e3e03bb7a17003356984bb2f24793c0141528d6517579ab76bbf25695eb24507f64f61ee5a852d32de38aedf9355722a8c9e930bdfcc0dce9
+  version: 1.5.492
+  resolution: "electron-to-chromium@npm:1.5.492"
+  checksum: 10c0/c0ea729b8b0a6b3c5c3dd9ebce109833e80383e21e0ec6423d130263b976277cf93d3c5e1129bc7d3338a36e3ba24457ec789bbc20dc96f29cd2d716ec383d0a
   languageName: node
   linkType: hard
 
@@ -8335,9 +8335,9 @@ __metadata:
   linkType: hard
 
 "object-inspect@npm:^1.13.3, object-inspect@npm:^1.13.4":
-  version: 1.13.4
-  resolution: "object-inspect@npm:1.13.4"
-  checksum: 10c0/d7f8711e803b96ea3191c745d6f8056ce1f2496e530e6a19a0e92d89b0fa3c76d910c31f0aa270432db6bd3b2f85500a376a83aaba849a8d518c8845b3211692
+  version: 1.14.0
+  resolution: "object-inspect@npm:1.14.0"
+  checksum: 10c0/15b78267566dc96ac8407b20f404879203383f76ade0a08a6684476c08ea7f58ba26c746b5aaac63d4e634534d778586f4bda767ce139b166e7dc4794518a3c5
   languageName: node
   linkType: hard
 
@@ -9847,8 +9847,8 @@ __metadata:
   linkType: hard
 
 "terser@npm:^5.15.0":
-  version: 5.51.2
-  resolution: "terser@npm:5.51.2"
+  version: 5.51.4
+  resolution: "terser@npm:5.51.4"
   dependencies:
     "@jridgewell/source-map": "npm:^0.3.3"
     acorn: "npm:^8.15.0"
@@ -9856,7 +9856,7 @@ __metadata:
     source-map-support: "npm:~0.5.20"
   bin:
     terser: bin/terser
-  checksum: 10c0/e6dd3d9152ad51b5a990e55bf0647701278970193d2ce2359a401623e65827a27a1803f5d58593a1f0b5e10ff3fa316a8d014d4f88a28d98ea94fb69359aeae5
+  checksum: 10c0/eae8fe3d3c7f3f214df468141ce85f6e9be99d34ce21500e335bb48e432f323b15058be9142f04f030c749e6f3db159d6c05e060f88a164e057887716df47785
   languageName: node
   linkType: hard
 
